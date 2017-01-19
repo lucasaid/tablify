@@ -23,7 +23,8 @@ tr {
   padding: 0 1.5em; }
 
 td {
-  padding: 0.75em 0 1.125em 60%; }
+  padding-top: 0.75em;
+  padding-bottom: 1.125em; }
 
 @media only screen and (min-width: 48em) {
   table {

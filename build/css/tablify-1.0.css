@@ -12,13 +12,18 @@
 
 .tablify-wrap td {
   position: relative;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: right;
-  padding-left: 60%; }
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%; }
   .tablify-wrap td:before {
     font-weight: bold;
-    position: absolute;
-    width: 55%;
     text-align: left; }
 
 @media only screen and (min-width: 48em) {

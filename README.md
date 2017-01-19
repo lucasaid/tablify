@@ -1,6 +1,6 @@
 # Tablify
 
-[Demo](https://lucasaid.github.io/responsive-tables/build/)
+[Demo](https://lucasaid.github.io/tablify/build/)
 
 Include in your code
 * js/tablify-1.0.min.js

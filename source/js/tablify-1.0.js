@@ -1,10 +1,25 @@
 $.fn.tablify = function() {
+    const sheet = (function() {
+        // Create the <style> tag
+        var style = document.createElement("style");
+
+        // WebKit hack
+        style.appendChild(document.createTextNode(""));
+
+        style.type  = 'text/css';
+        style.rel   = 'stylesheet';
+        style.media = 'screen';
+
+        // Add the <style> element to the page
+        document.head.appendChild(style);
+        return style.sheet;
+    })();
+
     return this.each(function() {
         $(this).addClass('tablify-wrap');
 
         const table = this;
-        const sheet = document.styleSheets[0];
-        const tdpadd = $("td", table).css('padding-left');
+        const tdpadd = $("td", table).css('padding-right');
 
         if(!$("thead").length){
             $('th').first().parent().wrap("<thead></thead>");
@@ -16,10 +31,10 @@ $.fn.tablify = function() {
             var selector = 'td:nth-of-type('+index+'):before';
             var rules = 'content: "'+$(element).html()+'"; left: '+tdpadd+';';
 
-            if("insertRule" in sheet) {
+            if($.inArray("insertRule",sheet)) {
                 sheet.insertRule(selector + "{" + rules + "}", 0);
             }
-            else if("addRule" in sheet) {
+            else if($.inArray("addRule",sheet)) {
                 sheet.addRule(selector, rules);
             }
         });

@@ -13,7 +13,8 @@
 .tablify-wrap td {
   position: relative;
   width: 100%;
-  text-align: right; }
+  text-align: right;
+  padding-left: 60%; }
   .tablify-wrap td:before {
     font-weight: bold;
     position: absolute;
@@ -30,6 +31,7 @@
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
   .tablify-wrap td {
-    text-align: left; }
+    text-align: left;
+    padding-left: 0; }
     .tablify-wrap td:before {
       display: none; } }

@@ -14,6 +14,7 @@
     position: relative;
     width: 100%;
     text-align: right;
+    padding-left: 60%;
 
     &:before{
       font-weight: bold;
@@ -35,6 +36,7 @@
     }
     td {
       text-align: left;
+      padding-left: 0;
       &:before{display: none;}
     }
   }

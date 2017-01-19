@@ -1,0 +1,21 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    link(rel='stylesheet', href='css/tablify-1.0.min.css')
+    link(rel='stylesheet', href='css/theme.min.css')
+  body
+    // Add your site or application content here
+    include partials/_table.html
+    script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous")
+    script.
+      window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.slim.min.js"><\\/script>')
+    script(src='js/tablify-1.0.js')
+    script.
+      $( "table" ).tablify();

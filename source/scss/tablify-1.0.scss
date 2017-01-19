@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+.tablify-wrap {
+  thead{
+    display: none;
+  }
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    &:nth-child(even){
+      background: #DDDDDD;
+    }
+  }
+  td {
+    position: relative;
+    width: 100%;
+    text-align: right;
+
+    &:before{
+      font-weight: bold;
+      position: absolute;
+      width: 55%;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and ( min-width: 48em ) {
+  .tablify-wrap {
+    thead{
+      display: block;
+    }
+    tr {
+      display: flex !important;
+      flex-wrap: nowrap;
+    }
+    td {
+      text-align: left;
+      &:before{display: none;}
+    }
+  }
+}

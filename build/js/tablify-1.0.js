@@ -27,9 +27,9 @@ $.fn.tablify = function() {
         $('tbody').contents().unwrap();
         $('table > tr').wrapAll( "<tbody></tbody>" );
 
-        $("thead, th", table).each(function(index, element){
-            var selector = 'td:nth-of-type('+index+'):before';
-            var rules = 'content: "'+$(element).html()+'"; left: '+tdpadd+';';
+        $("thead th", table).each(function(index, element){
+            var selector = 'td:nth-of-type('+(index+1)+'):before ';
+            var rules = " content: '"+$(element).html()+"'; left: "+tdpadd+"; ";
 
             if($.inArray("insertRule",sheet)) {
                 sheet.insertRule(selector + "{" + rules + "}", 0);

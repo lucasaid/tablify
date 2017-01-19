@@ -26,6 +26,9 @@
     font-weight: bold;
     text-align: left; }
 
+.tablify-wrap .tablify-ignore {
+  display: none; }
+
 @media only screen and (min-width: 48em) {
   .tablify-wrap thead {
     display: block; }
@@ -39,4 +42,6 @@
     text-align: left;
     padding-left: 0; }
     .tablify-wrap td:before {
-      display: none; } }
+      display: none; }
+  .tablify-wrap .tablify-ignore {
+    display: block; } }

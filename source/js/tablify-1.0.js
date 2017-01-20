@@ -31,7 +31,7 @@ $.fn.tablify = function(limit) {
         const table = this;
 
         if(!$("thead", table).length){
-            $('th').first().parent().wrap("<thead></thead>");
+            $('th', table).first().parent().wrap("<thead></thead>");
         }
         $('tbody', table).contents().unwrap();
         $('table > tr', table).wrapAll( "<tbody></tbody>" );
@@ -39,7 +39,7 @@ $.fn.tablify = function(limit) {
         $("thead th", table).each(function(index, element){
             // Add header values to before element in css
             if(!$(element).hasClass('tablify-ignore')){
-                var selector = 'td:nth-of-type('+(index+1)+'):before ';
+                var selector = '.tablify-wrap td:nth-of-type('+(index+1)+'):before ';
                 var rules = " content: '"+$(element).html()+"'; ";
                 addRule(sheet, selector, rules);
             } else {

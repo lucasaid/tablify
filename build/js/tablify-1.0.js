@@ -29,7 +29,6 @@ $.fn.tablify = function(limit) {
         $(this).addClass('tablify-wrap');
 
         const table = this;
-        const tdpadd = $("td", table).css('padding-right');
 
         if(!$("thead").length){
             $('th').first().parent().wrap("<thead></thead>");
@@ -41,7 +40,7 @@ $.fn.tablify = function(limit) {
             // Add header values to before element in css
             if(!$(element).hasClass('tablify-ignore')){
                 var selector = 'td:nth-of-type('+(index+1)+'):before ';
-                var rules = " content: '"+$(element).html()+"'; left: "+tdpadd+"; ";
+                var rules = " content: '"+$(element).html()+"'; ";
                 addRule(sheet, selector, rules);
             } else {
                 $('td:nth-of-type('+(index+1)+')').addClass('tablify-ignore');

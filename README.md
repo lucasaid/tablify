@@ -1,6 +1,6 @@
 # Tablify
 
-Respond all the tables. Built for bad clients who want tables in their CMS
+Respond all the tables. Built for bad people who want tables in their CMS
 
 [Demo](https://lucasaid.github.io/tablify/build/)
 

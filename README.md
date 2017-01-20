@@ -9,26 +9,18 @@ Include in your code
 * css/tablify-1.0.min.css
 * jQuery
 
-Then in your script
-```sh
-$('table').tablify(); // Or target specific tables with different selector
-$('table').tablify(10); // Limits mobile to 10 rows
-```
-
-
-Attach the class ```tablify-ignore``` to hide specific columns on mobile
-
+### Basic HTML usage
 ```sh
 <table>
 	<tr>
 		<th>First Name</th>
-		<th class="tablify-ignore">Last Name</th>
+		<th>Last Name</th>
 		<th>Phone</th>
-		<th class="tablify-ignore">Date</th>
+		<th>Date</th>
 		<th>Company</th>
-		<th class="tablify-ignore">City</th>
+		<th>City</th>
 		<th>Country</th>
-		<th class="tablify-ignore">Postcode</th>
+		<th>Postcode</th>
 	</tr>
 	<tr>
 		<td>Kevin</td>
@@ -53,4 +45,38 @@ Attach the class ```tablify-ignore``` to hide specific columns on mobile
 </table>
 ```
 
+### Apply responsiveness to all tables
+```sh
+$('table').tablify();
+```
+
+### Or specific elements
+```sh
+$('.responsive-tables').tablify();
+```
+
+### Limit number of rows shown on smaller screens
+```sh
+$('table').tablify(10);
+```
+
+
+### Add `tablify-ignore` to table header columns to hide on small screens
+```sh
+<table>
+	<tr>
+		<th>First Name</th>
+		<th class="tablify-ignore">Last Name</th>
+		<th>Phone</th>
+		<th class="tablify-ignore">Date</th>
+		<th>Company</th>
+		<th class="tablify-ignore">City</th>
+		<th>Country</th>
+		<th class="tablify-ignore">Postcode</th>
+	</tr>
+</table>
+```
+
+
+### Example
 ![example](https://lucasaid.github.io/tablify/example.gif "example")

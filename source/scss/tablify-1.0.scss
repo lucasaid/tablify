@@ -6,8 +6,12 @@
   tr {
     display: flex;
     flex-wrap: wrap;
-    &:nth-child(even){
-      background: #DDDDDD;
+  }
+  tbody {
+    tr {
+      &:nth-child(even){
+        background: #DDDDDD;
+      }
     }
   }
   td {

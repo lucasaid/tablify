@@ -7,8 +7,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .tablify-wrap tr:nth-child(even) {
-    background: #DDDDDD; }
+
+.tablify-wrap tbody tr:nth-child(even) {
+  background: #DDDDDD; }
 
 .tablify-wrap td {
   position: relative;

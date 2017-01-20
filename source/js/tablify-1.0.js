@@ -34,7 +34,7 @@ $.fn.tablify = function(limit) {
             $('th', table).first().parent().wrap("<thead></thead>");
         }
         $('tbody', table).contents().unwrap();
-        $('table > tr', table).wrapAll( "<tbody></tbody>" );
+        $('> tr', table).wrapAll( "<tbody></tbody>" );
 
         $("thead th", table).each(function(index, element){
             // Add header values to before element in css

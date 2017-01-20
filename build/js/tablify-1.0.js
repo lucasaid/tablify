@@ -30,11 +30,11 @@ $.fn.tablify = function(limit) {
 
         const table = this;
 
-        if(!$("thead").length){
+        if(!$("thead", table).length){
             $('th').first().parent().wrap("<thead></thead>");
         }
-        $('tbody').contents().unwrap();
-        $('table > tr').wrapAll( "<tbody></tbody>" );
+        $('tbody', table).contents().unwrap();
+        $('table > tr', table).wrapAll( "<tbody></tbody>" );
 
         $("thead th", table).each(function(index, element){
             // Add header values to before element in css
@@ -43,13 +43,13 @@ $.fn.tablify = function(limit) {
                 var rules = " content: '"+$(element).html()+"'; ";
                 addRule(sheet, selector, rules);
             } else {
-                $('td:nth-of-type('+(index+1)+')').addClass('tablify-ignore');
+                $('td:nth-of-type('+(index+1)+')', table).addClass('tablify-ignore');
             }
         });
         if(limit > 1){
-            $('tr').addClass('tablify-ignore');
+            $('tr', table).addClass('tablify-ignore');
             for(i=1; i<=limit; i++)
-                $('tr:nth-of-type('+(i+1)+')').removeClass('tablify-ignore');
+                $('tr:nth-of-type('+(i+1)+')', table).removeClass('tablify-ignore');
         }
     });
 };

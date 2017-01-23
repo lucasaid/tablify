@@ -4,7 +4,8 @@ body {
 .container {
   max-width: 75em;
   margin: auto;
-  margin-top: 5em; }
+  margin-top: 5em;
+  margin-bottom: 5em; }
 
 .code {
   color: blue;

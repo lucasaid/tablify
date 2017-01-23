@@ -12,10 +12,17 @@ html.no-js(lang='')
     link(rel='stylesheet', href='css/theme.min.css')
   body
     // Add your site or application content here
-    include partials/_table.html
+    div.container
+      include partials/_table.html
+      include partials/_table_2.html
+      include partials/_table_3.html
+      include partials/_table_4.html
     script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous")
     script.
       window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.slim.min.js"><\\/script>')
     script(src='js/tablify-1.0.js')
     script.
-      $( "table" ).tablify({hidden: "none"});
+      $( ".demo1" ).tablify();
+      $( ".demo2" ).tablify({limit: 2});
+      $( ".demo3" ).tablify({hidden: [1,2,7,8]});
+      $( ".demo4" ).tablify();

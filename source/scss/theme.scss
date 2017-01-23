@@ -1,6 +1,18 @@
 @charset 'UTF-8';
 body {
-  font: 400 1em "Arial";
+  font: 400 1em "courier";
+}
+.container {
+  max-width: 75em;
+  margin: auto;
+  margin-top: 5em
+}
+.code {
+  color: blue;
+  font-size: 14px;
+}
+h2 {
+  margin-top: 5em
 }
 table{
   border-top: 1px solid #ddd5d1;

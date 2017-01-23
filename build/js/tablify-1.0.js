@@ -6,7 +6,7 @@ $.fn.tablify = function(config) {
 
     if (typeof(config.limit)==='undefined') config.limit = 0;
     if (typeof(config.hidden)==='undefined') config.hidden = [];
-    
+
     const sheet = (function() {
         // Create the <style> tag
         var style = document.createElement("style");
@@ -67,7 +67,7 @@ $.fn.tablify = function(config) {
         if(config.limit >= 1){
             $('tr', table).addClass('tablify-ignore');
             for(i=1; i<=config.limit; i++)
-                $('tr:nth-of-type('+(i+1)+')', table).removeClass('tablify-ignore');
+                $('tr:nth-of-type('+i+')', table).removeClass('tablify-ignore');
         }
     });
 };

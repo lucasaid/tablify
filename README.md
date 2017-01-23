@@ -57,11 +57,16 @@ $('.responsive-tables').tablify();
 
 ### Limit number of rows shown on smaller screens
 ```sh
-$('table').tablify(10);
+$('table').tablify({limit: 10});
 ```
 
 
-### Add `tablify-ignore` to table header columns to hide on small screens
+### Hide specific rows on smaller screens
+```sh
+$('table').tablify({hidden: [1,3]});
+```
+
+### OR Add `tablify-ignore` to table header columns
 ```sh
 <table>
 	<tr>
@@ -75,6 +80,11 @@ $('table').tablify(10);
 		<th class="tablify-ignore">Postcode</th>
 	</tr>
 </table>
+```
+
+### Overide ignore classes with
+```sh
+$('table').tablify({hidden: "none"});
 ```
 
 

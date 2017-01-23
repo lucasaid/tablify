@@ -30,8 +30,20 @@ $.fn.tablify = function(limit) {
 
         const table = this;
 
+        if(!$("th", table).length){
+          $("tr:first-child td", table).each(function(index, element){
+
+            var th = $("<th />");
+            Array.prototype.slice.call(element.attributes).forEach(function(a) {
+              th.attr(a.name, a.value);
+            });
+            $(element).wrapInner(th).children(0).unwrap();
+
+          });
+        }
+
         if(!$("thead", table).length){
-            $('th', table).first().parent().wrap("<thead></thead>");
+          $('th', table).first().parent().wrap("<thead></thead>");
         }
         $('tbody', table).contents().unwrap();
         $('> tr', table).wrapAll( "<tbody></tbody>" );

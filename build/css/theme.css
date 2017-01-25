@@ -22,8 +22,7 @@ table {
 
 th {
   font-weight: bold;
-  padding: 1.5em 0.5em;
-  width: 100%; }
+  padding: 1.5em 0.5em; }
 
 tbody tr {
   display: none; }

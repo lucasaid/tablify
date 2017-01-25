@@ -11,6 +11,9 @@
 .tablify-wrap tbody tr:nth-child(even) {
   background: #DDDDDD; }
 
+.tablify-wrap th {
+  width: 100%; }
+
 .tablify-wrap td {
   position: relative;
   display: -webkit-box;

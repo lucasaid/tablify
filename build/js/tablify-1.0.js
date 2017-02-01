@@ -55,7 +55,6 @@ $.fn.tablify = function(config) {
 
         $("thead th", table).each(function(index, element){
             // Add header values to before element in css
-            console.log(config.hidden.length);
             if((!$(element).hasClass('tablify-ignore') && config.hidden.length <= 0) || (config.hidden.length > 0 && config.hidden.indexOf(index+1) === -1)){
                 var selector = '.tablify-wrap td:nth-of-type('+(index+1)+'):before ';
                 var rules = " content: '"+$(element).html()+"'; ";

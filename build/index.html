@@ -71,7 +71,7 @@
 <span class="code">$('table').tablify({limit: 2});</span>
 <table class="demo2">
 	<tr>
-		<td>First Name</td>
+		<td>Cool Name</td>
 		<td>Last Name</td>
 		<td>Phone</td>
 		<td>Date</td>
@@ -229,6 +229,25 @@
 		<td>66220-665</td>
 	</tr>
 </table>
+<h2>Table header first column</h2>
+<span class="code">$('table').tablify();</span>
+<table class="demo5">
+	<tr>
+		<th>Name</th>
+		<td>Kevin</td>
+		<td>Mccray</td>
+	</tr>
+	<tr>
+		<th>Age</th>
+		<td>6 Months</td>
+		<td>400 Years</td>
+	</tr>
+	<tr>
+		<th>Address</th>
+		<td>111 Street St</td>
+		<td>New York</td>
+	</tr>
+</table>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
@@ -239,6 +258,7 @@
       $( ".demo2" ).tablify({limit: 2});
       $( ".demo3" ).tablify({hidden: [1,2,7,8]});
       $( ".demo4" ).tablify();
+      $( ".demo5" ).tablify();
     </script>
   </body>
 </html>

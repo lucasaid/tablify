@@ -87,6 +87,27 @@ $('table').tablify({hidden: [1,3]});
 $('table').tablify({hidden: "none"});
 ```
 
+### Use first column as a table header
+```sh
+<table>
+  <tr>
+    <th>Name</th>
+    <td>Kevin</td>
+    <td>Mccray</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>6 Months</td>
+    <td>400 Years</td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <td>111 Street St</td>
+    <td>New York</td>
+  </tr>
+</table>
+```
+
 
 ### Example
 ![example](https://lucasaid.github.io/tablify/example.gif "example")

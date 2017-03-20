@@ -21,7 +21,8 @@
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%; }
-    .tablify-wrap td:before {
+    .tablify-wrap td[data-header]:before {
+      content: attr(data-header);
       font-weight: bold;
       text-align: left; }
   .tablify-wrap .tablify-ignore {

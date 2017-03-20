@@ -20,7 +20,8 @@
       flex-wrap: nowrap;
       width:100%;
 
-      &:before{
+      &[data-header]:before{
+        content: attr(data-header);
         font-weight: bold;
         text-align: left;
       }

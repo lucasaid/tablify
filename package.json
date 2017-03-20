@@ -1,5 +1,5 @@
 {
-  "name": "shiny-broccoli",
+  "name": "tablify",
   "version": "1.0.0",
   "description": "Base template for node and gulp process",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucasaid/shiny-broccoli.git"
+    "url": "git+https://github.com/lucasaid/tablify.git"
   },
   "author": "Chris Lucas <christopher.lucas11@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucasaid/shiny-broccoli/issues"
+    "url": "https://github.com/lucasaid/tablify/issues"
   },
-  "homepage": "https://github.com/lucasaid/shiny-broccoli#readme",
+  "homepage": "https://github.com/lucasaid/tablify#readme",
   "devDependencies": {
     "commitizen": "2.7.2",
     "cz-conventional-changelog": "1.1.5",

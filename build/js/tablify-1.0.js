@@ -35,7 +35,7 @@ $.fn.tablify = function(config) {
                 // Add header values to before element in css
                 if((!$(element).hasClass('tablify-ignore') && config.hidden.length <= 0) || (config.hidden.length > 0 && config.hidden.indexOf(index+1) === -1)){
                     $('tbody td:nth-of-type('+(index+1)+')', table).each(function(indexCell, tableCell){
-                        $(tableCell).attr('data-header',$(element).html())
+                        $(tableCell).attr('data-header',$(element).text())
                     });
                 } else {
                     $('td:nth-of-type('+(index+1)+')', table).addClass('tablify-ignore');
